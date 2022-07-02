@@ -1,4 +1,4 @@
-<script>
+
 var data = {
 	action: 'textdomain_templeate_builder',
 	post_id: post_id ? post_id : null,
@@ -24,4 +24,3 @@ $.ajax({
 
 	}
 });
-</script>
