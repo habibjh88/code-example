@@ -1,8 +1,8 @@
 // 1. what will be the output of the below codes?
 //=========================================
-console.log([] + []); // ""
+console.log([] + []); // "" blank (coz: empty array = '')
 
-console.log({} + []); // [object Object]
+console.log({} + []); // [object Object] (coz: empty {} = object Object)
 
 
 // 2. what will be the output of below code?
@@ -12,7 +12,7 @@ function myFunction(){
 }
 
 const string = myFunction `hello `;
-console.log(string); // Bangladesh
+console.log(string); // Bangladesh  (coz: if a tag literal sit after any function then it will be an argument of the function. And hello go in arguments object of this function)
 
 // 3. how to make all text contents of a website editable?
 //=========================================

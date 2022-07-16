@@ -1,4 +1,5 @@
 // 8. comma operator
+// exicute both statement between comma and return last element
 
 let x = 1;
 x = (x++, x);
