@@ -1,0 +1,23 @@
+1. 	WordPress 1st and last fire hook - 
+	Ans: 	First: muplugins_loaded (After must-use plugins are loaded.)
+		Last: shutdown (Before PHP execution is about to end.)
+	Some Important Hook: 
+	- muplugins_loaded - 1
+	- registered_taxonomy - 2
+	- registered_post_type - 3
+	- plugins_loaded -4 
+	- setup_theme
+	- setup_theme  (Before the theme is loaded.)
+	- load_textdomain
+	- after_setup_theme (triggered immediately after the active theme's functions.php file is loaded.)
+	- set_current_user
+	- init (Fires after WordPress has finished loading but before any headers are sent. and the user is authenticated)
+	- register_sidebar
+	- wp_loaded (After WordPress is fully loaded)
+	- wp_enqueue_scripts (When scripts and styles are enqueued.)
+	- wp_head (Used to print scripts or data in the head tag on the front end.)
+	- loop_start
+	- the_post (Allows modification of the post object immediately after query)
+	- loop_end
+	- wp_footer (Before determining which template to load.)
+	- shutdown 

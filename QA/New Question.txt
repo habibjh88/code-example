@@ -1,3 +1,0 @@
-1. 	WordPress 1st and last fire hook - 
-	Ans: 	First: muplugins_loaded (After must-use plugins are loaded.)
-		Last: shutdown (Before PHP execution is about to end.)
