@@ -1,0 +1,48 @@
+1.  > HTML is Not Case Sensitive,
+    > CSS can be added to HTML documents in 3 ways: Inline, Internal (<style></style> in head), External (link file)
+
+2.  HTML Elements: The HTML element is everything from the start tag to the end tag. Ex: <h1></h1>, <p></p>
+    2.1) Empty HTML Elements: HTML elements with no content are called empty elements. Ex: <br>
+
+3.  HTML Attributes: HTML attributes provide additional information about HTML elements.
+
+4.  HTML Headings: HTML headings are titles or subtitles that you want to display on a webpage. Ex: H1 - H6
+
+5.  HTML Formatting Elements: Ex: <b>,<strong>,<i>,<em>,<mark>,<small>,<del>,<ins>,<sub>,<sup>
+
+6.  HTML Quotation and Citation Elements:
+    <abbr>	        Defines an abbreviation or acronym
+    <address>	    Defines contact information for the author/owner of a document
+    <bdo>	        Defines the text direction (Bi-Directional Override)                         //TODO: Inportant
+    <blockquote>	Defines a section that is quoted from another source
+    <cite>	        Defines the title of a work
+    <q>	            Defines a short inline quotation
+
+7.  HTML Color: 
+    > rgba(red, green, blue, alpha)
+    > hsl(hue, saturation, lightness)
+
+8.  Image Formats
+    APNG	Animated Portable Network Graphics	    .apng
+    GIF	    Graphics Interchange Format	            .gif
+    ICO	    Microsoft Icon	                        .ico, .cur
+    JPEG	Joint Photographic Expert Group image   .jpg, .jpeg, .jfif, .pjpeg, .pjp
+    PNG	    Portable Network Graphics	            .png
+    SVG	    Scalable Vector Graphics	            .svg
+
+    Image Map:
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+    <map name="workmap">
+        <!-- Each point have (x,y),(x,y),(x,y)-->
+        <area id="area1" target="_blank" title="Laptop" coords="33,40,276,41,266,187,274,349,32,345,43,191" shape="poly" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <!-- Cicle point = (x,y,radius)-->
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    </map>
+
+9.  
+
+10.  
+
+11.  
+
