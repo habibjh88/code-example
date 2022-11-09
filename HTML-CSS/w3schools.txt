@@ -58,5 +58,9 @@
     novalidate	    Specifies that the form should not be validated when submitted
     rel	            Specifies the relationship between a linked resource and the current document
     target	        Specifies where to display the response that is received after submitting the form
-11.  
+11.  Semantic elements = elements with a meaning.
+    Non-semantic elements:  <div> and <span> - Tells nothing about its content.
+    Semantic elements:      <form>, <table>, and <article> - Clearly defines its content.
+
+
 
