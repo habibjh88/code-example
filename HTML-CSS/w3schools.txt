@@ -1,0 +1,66 @@
+1.  > HTML is Not Case Sensitive,
+    > CSS can be added to HTML documents in 3 ways: Inline, Internal (<style></style> in head), External (link file)
+
+2.  HTML Elements: The HTML element is everything from the start tag to the end tag. Ex: <h1></h1>, <p></p>
+    2.1) Empty HTML Elements: HTML elements with no content are called empty elements. Ex: <br>
+
+3.  HTML Attributes: HTML attributes provide additional information about HTML elements.
+
+4.  HTML Headings: HTML headings are titles or subtitles that you want to display on a webpage. Ex: H1 - H6
+
+5.  HTML Formatting Elements: Ex: <b>,<strong>,<i>,<em>,<mark>,<small>,<del>,<ins>,<sub>,<sup>
+
+6.  HTML Quotation and Citation Elements:
+    <abbr>	        Defines an abbreviation or acronym
+    <address>	    Defines contact information for the author/owner of a document
+    <bdo>	        Defines the text direction (Bi-Directional Override)                         //TODO: Inportant
+    <blockquote>	Defines a section that is quoted from another source
+    <cite>	        Defines the title of a work
+    <q>	            Defines a short inline quotation
+
+7.  HTML Color: 
+    > rgba(red, green, blue, alpha)
+    > hsl(hue, saturation, lightness)
+
+8.  Image Formats
+    APNG	Animated Portable Network Graphics	    .apng
+    GIF	    Graphics Interchange Format	            .gif
+    ICO	    Microsoft Icon	                        .ico, .cur
+    JPEG	Joint Photographic Expert Group image   .jpg, .jpeg, .jfif, .pjpeg, .pjp
+    PNG	    Portable Network Graphics	            .png
+    SVG	    Scalable Vector Graphics	            .svg
+
+    Image Map:
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+    <map name="workmap">
+        <!-- Each point have (x,y),(x,y),(x,y)-->
+        <area id="area1" target="_blank" title="Laptop" coords="33,40,276,41,266,187,274,349,32,345,43,191" shape="poly" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <!-- Cicle point = (x,y,radius)-->
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    </map>
+
+9.  HTML List: 
+    1. Ordered HTML List
+    2. Unordered HTML List
+    3. HTML Description Lists
+        <dl> = description list
+        <dt> = Defines a term in a description list
+        <dd> = Describes the term in a description list
+
+10.  List of All <form> Attributes
+    accept-charset	Specifies the character encodings used for form submission
+    action	        Specifies where to send the form-data when a form is submitted
+    autocomplete	Specifies whether a form should have autocomplete on or off
+    enctype	        Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+    method	        Specifies the HTTP method to use when sending form-data
+    name	        Specifies the name of the form
+    novalidate	    Specifies that the form should not be validated when submitted
+    rel	            Specifies the relationship between a linked resource and the current document
+    target	        Specifies where to display the response that is received after submitting the form
+11.  Semantic elements = elements with a meaning.
+    Non-semantic elements:  <div> and <span> - Tells nothing about its content.
+    Semantic elements:      <form>, <table>, and <article> - Clearly defines its content.
+
+
+
