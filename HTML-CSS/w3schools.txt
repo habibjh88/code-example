@@ -58,9 +58,49 @@
     novalidate	    Specifies that the form should not be validated when submitted
     rel	            Specifies the relationship between a linked resource and the current document
     target	        Specifies where to display the response that is received after submitting the form
-11.  Semantic elements = elements with a meaning.
+
+11.  Semantic elements = A semantic element clearly describes its meaning to both the browser and the developer.
     Non-semantic elements:  <div> and <span> - Tells nothing about its content.
-    Semantic elements:      <form>, <table>, and <article> - Clearly defines its content.
+    Semantic elements:      <form>, <table>, <na> and <article> etc - Clearly defines its content.
+
+12. HTML Entities: Some characters are reserved in HTML. If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.
+    Ex: &nbsp; // blank space
+        &copy; //© copyright
+        &amp; // & ampersand
+        &reg; // ®	registered trademark
+
+13. Symbol: Symbols that are not present on your keyboard can also be added by using entities.
+
+14. Emojis: Emojis are characters from the UTF-8 character set: 😄 😍 💗
+
+15. Form: <fieldset> <legend> <output>
+    <output>: 
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
+
+16. 
+
+17. 
+
+18.
+
+19.
+
+20. 
+
+21.
+
+22.
+
+23.
+
+24.
+
+25.
+
 
 
 
