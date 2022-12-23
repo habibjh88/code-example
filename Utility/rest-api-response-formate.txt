@@ -1,0 +1,19 @@
+
+If success true
+[
+	'success'=> 'ok',
+	'data'=>[
+		'post'=>[],
+		''
+	],
+	'message'=> ''
+];
+
+
+If not success
+
+[
+	'success'=> 'error',
+	'data'=>[],
+	'message'=> ''
+];
