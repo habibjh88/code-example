@@ -30,7 +30,7 @@ function template_callback($file)
 {
     global $post;
     if ($post->post_type == 'book') {
-        $file_path = plugin_dir_path(__FILE__) . 'template/single-template.php'; //Actual file path
+        $file_path = plugin_dir_path(__FILE__) . 'templates/single-template.php'; //Actual file path
         $file = $file_path;
     }
     return $file;
@@ -47,7 +47,7 @@ add_filter( 'template_include',  'el_template_loader_default_file', 99 );
 function el_template_loader_default_file( $default_file ) {
     global $wp_query;
     $builder_file = '';
-    $file_path = plugin_dir_path(__FILE__) . 'template/single-template.php'; //Actual file path
+    $file_path = plugin_dir_path(__FILE__) . 'templates/single-template.php'; //Actual file path
 
 
     if ( self::$single_page_builder_id && is_singular( self::$tpg_post_types ) ) {

@@ -2,6 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 
 const LOCAL_STORAGE_KEY = 'local.storage';
 
+// Object Stracture
+// { 
+//  id:id, 
+//  name:name, 
+//  complete: false 
+// }
+
 export default function App() {
     const [todos, setTodos] = useState([]);
     const inputRef = useRef();
@@ -18,7 +25,7 @@ export default function App() {
     const handleAddItem = () => {
         const name = inputRef.current.value;
         if (name === '') return
-        let id = Math.random() * 10;
+        let id = Math.random() * 10; //Date.now() for timestamp
         setTodos(prev => {
             return [...prev, { id, name, complete: false }]
         })
