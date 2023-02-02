@@ -3,3 +3,9 @@ Validation – These are the checks that are run to ensure the data you have is 
 (you can restrict user input so that the user can input by input validation the exact formatted value like phone, email, etc. )
 
 Sanitization / Escaping – These are the filters that are applied to data to make it 'safe' in a specific context. For instance, to display HTML code in a text area it would be necessary to replace all the HTML tags by their entity equivalents
+
+
+
+Hyperlink and Backlink : Hyperlink is ANY link, including a link in your own Website's navigation. A backlink is a one-way link from another Website to yours. Back Link: Backlinks help your website to rank better and higher in search engines.
+
+noopener noreferrer: Using rel=”noopener noreferrer” tells Google that you care about link security. And you don’t want certain sites to recognize your site as a referral.

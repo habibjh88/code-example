@@ -118,7 +118,6 @@ class TemplateBuilder {
 			array_splice( $columns, 0, 2 ),
 			$column_meta,
 			$columns
-		//			array_slice( $columns, 2 )
 		);
 
 		return $columns;

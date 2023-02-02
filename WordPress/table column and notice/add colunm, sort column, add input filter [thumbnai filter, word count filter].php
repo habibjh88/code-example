@@ -31,6 +31,9 @@ function coldemo_post_columns( $columns ) {
 
 add_filter( 'manage_posts_columns', 'coldemo_post_columns' );
 add_filter( 'manage_pages_columns', 'coldemo_post_columns' );
+//For CPT = tpg_section
+add_filter( 'manage_edit-tpg_section_columns', 'coldemo_post_columns' );
+
 
 
 //Insert Data in column
@@ -53,9 +56,8 @@ function coldemo_post_column_data( $column, $post_id ) {
 
 add_action( 'manage_posts_custom_column', 'coldemo_post_column_data', 10, 2 );
 add_action( 'manage_pages_custom_column', 'coldemo_post_column_data', 10, 2 );
-
-
-
+//For CPT = tpg_section
+add_action( 'manage_tpg_section_posts_custom_column', 'coldemo_post_column_data', 10, 2 );
 
 //Sortable Column
 //=========================================
