@@ -14,4 +14,3 @@
     getBlockCount()
     getEditedPostContent()
     getBlocks()
-
