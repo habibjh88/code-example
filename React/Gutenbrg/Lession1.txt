@@ -1,0 +1,17 @@
+1.  wp.data.select("core/edit-post")
+    edit-post store contains the editor's UI information like, as we mentioned, is this sidebar opened or closed and so on.
+
+2.  wp.data.select("core/blocks")
+    getBlockTypes() -> this will return information about all the blocks that we have registered
+
+3.  wp.data.select("core")
+    This will have some information about our WordPress web site in general. So not just the specific
+    getAuthors() -> Get all author
+    getTaxonomies() -> Get all registered taxonomies Like- Categories, Tags etc
+
+4.  wp.data.select("core/editor")
+    this one will contain information about the current page that you're editing.
+    getBlockCount()
+    getEditedPostContent()
+    getBlocks()
+
