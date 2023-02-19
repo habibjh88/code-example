@@ -14,4 +14,7 @@
     getBlockCount()
     getEditedPostContent()
     getBlocks()
-    
+
+5.  Open edit post sidebar / Dispatch - প্রেরণ
+    wp.data.dispatch("core/edit-post").openGeneralSidebar("edit-post/block");
+
