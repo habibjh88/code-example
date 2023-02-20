@@ -9,3 +9,6 @@ Sanitization / Escaping – These are the filters that are applied to data to ma
 Hyperlink and Backlink : Hyperlink is ANY link, including a link in your own Website's navigation. A backlink is a one-way link from another Website to yours. Back Link: Backlinks help your website to rank better and higher in search engines.
 
 noopener noreferrer: Using rel=”noopener noreferrer” tells Google that you care about link security. And you don’t want certain sites to recognize your site as a referral.
+
+What is hoisting in javascript? 
+> move the declaration of functions, variables or classes to the top of their scope
