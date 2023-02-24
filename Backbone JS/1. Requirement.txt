@@ -1,0 +1,35 @@
+Youtube: https://www.youtube.com/@tushargarg9620
+Playlist: https://www.youtube.com/watch?v=SAVw7h2p6hE&list=PL2tpgEP3OLaB5uSwwuC3YAsOsz0SLvOlx
+
+1. jQuery 
+2. Underscore 
+3. Backbone 
+
+//Create Model
+var Team = Backbone.Model.extend();
+
+//Create Collection 
+vas player1 = new Team({
+    name: "Sakib",
+    from: "Bangldesh"
+});
+
+vas player2 = new Team({
+    name: "Tamim",
+    from: "Bangldesh"
+});
+
+var players = Backbone.Collection.extend();
+var p = new players([player1, player2]);
+
+//Operation:
+add()
+push()
+pop()
+unshift()
+shift()
+remove()
+where()
+findwhere()
+each()
+filter()

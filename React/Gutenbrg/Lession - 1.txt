@@ -1,3 +1,5 @@
+Github Repo for Gutenberg - https://github.com/WordPress/gutenberg/tree/trunk/packages
+
 1.  wp.data.select("core/edit-post")
     edit-post store contains the editor's UI information like, as we mentioned, is this sidebar opened or closed and so on.
 
