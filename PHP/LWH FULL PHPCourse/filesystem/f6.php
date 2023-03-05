@@ -12,5 +12,3 @@ foreach($files as $file){
 }
 
 echo "Directory Size ".$size." bytes";
-
-
