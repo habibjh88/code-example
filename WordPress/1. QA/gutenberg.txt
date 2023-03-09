@@ -1,0 +1,16 @@
+1.  Why it used - wp.data.subscribe()
+    It is a method used in WordPress block editor to listen for changes in the global application state.
+    এটা ওয়ার্ডপ্রেস ব্লক এডিটরে ব্যবহৃত একটি ফাংশন/মেথড যা ওয়ার্ডপ্রেস গ্লোবাল অ্যাপ্লিকেশান স্টেটে পরিবর্তনের লিসেন করা এবং স্টেট পরিবর্তনের সাথে সাথে কি করতে হবে তা ডিসিশন নেই। 
+
+2.  What does it do - wp.data.select()
+    In WordPress, wp.data.select is a utility function that allows you to retrieve data from the global application state in the WordPress block editor.
+    ওয়ার্ডপ্রেসে, wp.data.select হল একটি ইউটিলিটি ফাংশন যা আপনাকে ওয়ার্ডপ্রেস ব্লক এডিটরে গ্লোবাল অ্যাপ্লিকেশন স্টেট থেকে ডেটা পুনরুদ্ধার করতে দেয়। 
+
+3.  useSelect
+    In Gutenberg, the useSelect hook is used to retrieve (পুনরুদ্ধার) data from the Redux store in a React component.
+
+4.  compose 
+    it is as likely as flowRight of __Lodash. The "flowRight" function is used to create a new function by composing multiple functions together from right to left. 
+    Ex. 
+    const compose = ( f, g ) => x
+    => f( g( x ) );
