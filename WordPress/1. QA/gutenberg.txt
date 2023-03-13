@@ -13,5 +13,5 @@
     it is as likely as flowRight of __Lodash. The "flowRight" function is used to create a new function by composing multiple functions together from right to left. 
     Ex. 
     const compose = ( f, g ) => x
-    => f( g( x ) );
+    => f( g( x ) );  
 

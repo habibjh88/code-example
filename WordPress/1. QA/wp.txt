@@ -1,0 +1,2 @@
+1.  WCAG 2.0 (Web Content Accessibility Guidelines 2.0) is a set of guidelines for making web content more accessible to people with disabilities. 
+2.  GPL (General Public License) is a free, open-source software license that is used by many WordPress themes and plugins. It was created by the Free Software Foundation and is designed to give users the freedom to use, modify, and distribute software as they see fit.
