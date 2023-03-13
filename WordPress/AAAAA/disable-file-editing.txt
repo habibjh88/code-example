@@ -1,0 +1,3 @@
+
+//Disable Theme File Editor and Plugin File Editor
+define( 'DISALLOW_FILE_EDIT', true );
