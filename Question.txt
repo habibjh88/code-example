@@ -1,0 +1,2 @@
+Q   Difference between the async and defer attributes of the HTML script tag?
+    Ans: In summary, the main difference between async and defer is that async scripts can be executed as soon as they are downloaded, while defer scripts will be executed in the order they appear in the HTML code, but after the HTML parsing and rendering process is complete.
