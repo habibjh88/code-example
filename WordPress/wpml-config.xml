@@ -1,0 +1,62 @@
+<wpml-config>
+    <admin-texts>
+    <!-- Customizer -->
+        <key name="faktorie">
+            <key name="header_btn_txt"/>
+            <key name="walkscore_title"/>
+            <key name="overview_text"/>
+            <key name="details_text"/>
+            <key name="feature_text"/>
+            <key name="listing_widget_min_price"/>
+            <key name="listing_widget_max_price"/>
+            <key name="error_text"/>
+            <key name="error_subtitle"/>
+            <key name="error_buttontext"/>
+            <key name="copyright_text"/>
+            <key name="contact_address"/>
+            <key name="contact_phone"/>
+            <key name="contact_email"/>
+            <key name="contact_website"/>
+            <key name="listing_type_prefix_text"/>
+        </key>
+    </admin-texts>
+    <!-- CPT -->
+
+    <custom-types>
+        <custom-type translate="1">faktorie_team</custom-type>
+        <custom-type translate="1">faktorie_service</custom-type>
+        <custom-type translate="1">faktorie_portfolio</custom-type>
+    </custom-types>
+
+    <!-- Custom Taxonomy -->
+    <taxonomies>
+        <taxonomy translate="1">faktorie_team_category</taxonomy>
+        <taxonomy translate="1">faktorie_service_category</taxonomy>
+        <taxonomy translate="1">faktorie_portfolio_category</taxonomy>
+    </taxonomies>
+
+    <!-- Custom field -->
+    <custom-fields>
+        <custom-field action="translate">faktorie_youtube_link</custom-field>
+        <custom-field action="translate">faktorie_team_position</custom-field>
+        <custom-field action="translate">faktorie_team_website</custom-field>
+        <custom-field action="translate">faktorie_team_email</custom-field>
+        <custom-field action="translate">faktorie_team_phone</custom-field>
+        <custom-field action="translate">faktorie_team_address</custom-field>
+        <custom-field action="translate">faktorie_team_socials_header</custom-field>
+        <custom-field action="translate">faktorie_team_skill_info</custom-field>
+        <custom-field action="translate">skill_name</custom-field>
+        <custom-field action="translate">skill_value</custom-field>
+        <custom-field action="translate">skill_color</custom-field>
+        <custom-field action="translate">faktorie_team_contact</custom-field>
+        <custom-field action="translate">faktorie_team_contact_form</custom-field>
+        <custom-field action="translate">faktorie_project_title</custom-field>
+        <custom-field action="translate">faktorie_project_text</custom-field>
+        <custom-field action="translate">faktorie_project_client</custom-field>
+        <custom-field action="translate">faktorie_project_start</custom-field>
+        <custom-field action="translate">faktorie_project_end</custom-field>
+        <custom-field action="translate">faktorie_project_web</custom-field>
+        <custom-field action="translate">faktorie_service_icon</custom-field>
+    </custom-fields>
+
+</wpml-config>
