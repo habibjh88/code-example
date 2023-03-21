@@ -1,0 +1,3 @@
+1.  preg_replace( '/[^A-Za-z0-9-]+/', '-', $text ); //serch ( A to Z, a to z, 0 - 9, and - )
+    ^ = negated set [All the serch will be negated]
+    + =  Quantifier - Match 1 or more of the preceding token.
