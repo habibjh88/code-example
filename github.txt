@@ -1,1 +1,4 @@
 git pull --rebase
+
+git config --global user.email "habibjh88@gmail.com"
+git config --global user.name "Habib Rahaman"
