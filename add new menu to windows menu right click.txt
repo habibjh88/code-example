@@ -1,0 +1,7 @@
+Source: https://www.howtogeek.com/1364/add-any-application-to-the-desktop-right-click-menu-in-vista/
+
+1. Open "registy Editor"" from the start menu
+2. navigate to "HKEY_CLASSES_ROOT\Directory\Background\shell"
+3. Right click to Shell > New > Key [Enter the name of menu]
+4. Double click on default and enter the name of menu Ex. &cmdr
+4. add command Key and pest the file path in the command key's default item 
