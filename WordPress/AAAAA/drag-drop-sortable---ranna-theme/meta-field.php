@@ -1,4 +1,6 @@
 <?php
+// * Source from Ranna Theme
+// ===============================
 'rn_recipe_direction_list' => array(
 			'type'   => 'repeater',
 			'button' => __( 'Add New Direction', 'ranna-core' ),

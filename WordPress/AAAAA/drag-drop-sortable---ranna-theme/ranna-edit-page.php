@@ -1,6 +1,8 @@
 <?php
 /*
  * Template Name: Recipe Edit Page
+ * * Source from Ranna Theme
+===============================
  */
 
 global $post, $current_user;
