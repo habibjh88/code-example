@@ -5,8 +5,9 @@
 2.  /\d\d:\d\d:\d\d/g //Search (12:12:93) this format any digite
     \d = string to decimal 
 
-Hello, I'm Habibur Rahaman. Michal Černáček has say me to submit my latest plugin source to you. I have attached 3 popular themes (themeforest.net) and 2 plugins (wordpress.org) here for your review. Could you please review it? 
-If you search all attached theme and plugin by google then you can get it on the first page.
+3.  /\[(.*?)\]/g   //The quick grey [squirrel] Hello world------------- Extract squirrel from []
+    \[ \] matches the character [ ]
+    1st Capturing Group (.*?)
+    . matches any character except /n
+    *? matches the previous token between zero and unlimited times,
 
-Best Regards,
-Habibur Rahaman
