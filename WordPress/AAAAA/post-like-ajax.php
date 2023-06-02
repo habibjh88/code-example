@@ -31,35 +31,44 @@ function ranna_like() {
 // 2. Script Part 
 ?>
 <script>
-    $('.single-meta').on('click', '.like-recipe', function (event) {
-		event.preventDefault();
+   $('.single-meta').on('click', '.like-recipe', function (event) {
+        event.preventDefault();
         var _this = $(this),
             recipeID = _this.attr("data-recipeid"),
             authorID = _this.attr("data-author");
 
-		if ( authorID != 0 ) {
-			$.ajax({
-				url: ThemeObj.ajaxURL,
-				data: {authorID: authorID, recipeID: recipeID , action: 'ranna_like_action'},
-				type: 'POST',
-				success: function (resp) {
+            //Debounce ajax call / prevent multiple ajax call
+        if (_this.data('requestRunning')) {
+            return;
+        }
+        
+        _this.data('requestRunning', true);
 
-                    _this.parent( '.single-meta' ).find( '> .like-recipe span').text(resp.finalcount);
+        if (authorID != 0) {
+            $.ajax({
+                url: ThemeObj.ajaxURL,
+                data: {authorID: authorID, recipeID: recipeID, action: 'ranna_like_action'},
+                type: 'POST',
+                success: function (resp) {
+                    _this.parent('.single-meta').find('> .like-recipe span').text(resp.finalcount);
 
-					if ( resp.success ) {
-						// liked
-						_this.parent( '.single-meta' ).find( '> .like-recipe i').removeClass('fa fa-heart-o').addClass('fa fa-heart');
+                    if (resp.success) {
+                        // liked
+                        _this.parent('.single-meta').find('> .like-recipe i').removeClass('fa fa-heart-o').addClass('fa fa-heart');
 
-					} else {
+                    } else {
                         // not liked
-                        _this.parent( '.single-meta' ).find( '> .like-recipe i').removeClass('fa fa-heart').addClass('fa fa-heart-o');
-					}
-				},
-				error: function (e) {
-					console.log(e);
-				}
-			});
-		}
+                        _this.parent('.single-meta').find('> .like-recipe i').removeClass('fa fa-heart').addClass('fa fa-heart-o');
+                    }
+                },
+                complete: function () {
+                    _this.data('requestRunning', false);
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
 
     });
 
