@@ -1,0 +1,16 @@
+
+
+My text that should replace like that of the below
+----------------------------------------------------
+NeuzinTheme::$options['portfolio_style']
+NeuzinTheme::$options['portfolio_style2']['child]
+NeuzinTheme::$options['home_layout']
+
+
+//Search all text
+-----------------------
+NeuzinTheme::\$options\[(.*?)\]
+
+//Replace all text
+-----------------------
+NeuzinTheme::neuzin_options\($1\)
