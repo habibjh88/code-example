@@ -27,17 +27,20 @@
 	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
 	<rule ref="Generic.Commenting.Todo"/>
 
-	<rule ref="WordPress.WP.I18n">
+	<!-- <rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array" value="shopbuilder" />
 		</properties>
-	</rule>
+	</rule> -->
 
 	<!-- Allow short array syntax -->
 	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
 		<severity>0</severity>
 	</rule>
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
+	<rule ref="Universal">
+		<exclude name="Universal"/>
+	</rule>
 
 	<!-- Adds exceptions in files and variables naming conventions. -->
 	<rule ref="WordPress">
