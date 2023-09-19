@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Using Template Columns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="row d-grid">
+            <h1 class="full text-center bg-white d-grid center">CSS Grid Challenge <span>Using 'grid-template-columns'</span></h1>
+        </div>
+        <div class="row d-grid grid-equal-columns gap-20 height">
+            <div class="card d-grid center bg-purple md-col-span-2"><span>Grid 1</span></div>
+            <div class="card d-grid center bg-grey"><span>Grid 2</span></div>
+            <div class="card d-grid center bg-white md-row-span-2"><span>Grid 3</span></div>
+            <div class="card d-grid center bg-offset"><span>Grid 4</span></div>
+            <div class="card d-grid center bg-dark md-col-span-2"><span>Grid 5</span></div>
+        </div>
+    </main>
+</body>
+</html>

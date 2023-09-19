@@ -1,0 +1,174 @@
+/**
+ * Reset
+ */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+:root {
+    --grid-columns: 1fr;
+    --grid-template-areas:
+    "purple"
+    "grey"
+    "white"
+    "offset"
+    "dark";
+}
+
+/**
+ * Utilities
+ */
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 3.125rem 0.9375rem;
+}
+
+.gap-20 {
+    gap: 1.25rem;
+}
+
+.grid-equal-columns {
+    grid-auto-columns: var(--grid-columns);
+}
+
+.grid-areas {
+    grid-template-areas: var(--grid-template-areas);
+}
+
+.d-grid {
+    display: grid;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+.height {
+    height: calc(100% - 11.25rem);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-purple {
+    background-color: #653780;
+}
+
+.bg-offset {
+    background-color: #c6c7c8;
+}
+
+.bg-grey {
+    background-color: #4c5265;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-dark {
+    background-color: #212129;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/**
+ * Components
+ */
+
+h1 {
+    padding: 1.25rem;
+    outline: 0.625rem solid #fff;
+    outline-offset: 1.25rem;
+    margin: 0 0 4.375rem 1.875rem;
+    width: calc(100% - 3.75rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h1 span {
+    color: #787878;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    margin-top: 0.625rem;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 1.25rem;
+    box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card span {
+    color: white;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+}
+
+.card[class*="purple"] {
+    grid-area: purple;
+}
+
+.card[class*="offset"] {
+    grid-area: offset;
+}
+
+.card[class*="grey"] {
+    grid-area: grey;
+}
+
+.card[class*="white"] {
+    grid-area: white;
+}
+
+.card[class*="dark"] {
+    grid-area: dark;
+}
+
+@media (min-width: 48em) {
+    .grid-equal-columns {
+        --grid-columns: 2fr;
+    }
+
+    .grid-areas {
+        --grid-template-areas:
+        "purple purple"
+        "grey white"
+        "offset white"
+        "dark dark";
+    }
+}
+
+@media (min-width: 64em) {
+    .grid-equal-columns {
+        --grid-columns: 4fr;
+    }
+
+    .grid-areas {
+        --grid-template-areas:
+        "purple purple grey white"
+        "offset dark dark white";
+    }
+}
