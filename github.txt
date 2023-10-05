@@ -2,3 +2,12 @@ git pull --rebase
 
 git config --global user.email "habibjh88@gmail.com"
 git config --global user.name "Habib Rahaman"
+
+
+
+
+Add SSH key:
+
+ssh-keygen -t ed25519 -C "habibjh88@gmail.com"
+
+

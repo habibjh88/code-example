@@ -1,0 +1,15 @@
+======================================================================================
+1. Question: postgrid isotope issue
+
+Actually, it’s a default behavior of the isotope. Let’s explain- Suppose you entered posts per page equal to 12 and also selected a few categories like (A, B, C, etc.) for your layout.
+
+Now the query will try to pull the most recent 12 posts under those categories. If the query gets 12 recent posts from the A or B category you will never get posts from the C category. That means if posts of the C category are very old you will not get any posts from the C category. Because your block already got 12 recent posts from the A and B categories.
+
+Hopefully you understand that.
+
+N.B. But if you set -1 posts per page all posts will display on your block.
+
+Best regards
+Habib Rahman
+
+======================================================================================
