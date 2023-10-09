@@ -1,13 +1,27 @@
 git pull --rebase
 
+
+# Git config 
+=========================
 git config --global user.email "habibjh88@gmail.com"
 git config --global user.name "Habib Rahaman"
 
 
 
-
-Add SSH key:
-
+# Add SSH key:
+==========================
 ssh-keygen -t ed25519 -C "habibjh88@gmail.com"
 
 
+
+# Git branch delete 
+==========================
+
+=> Delete from remote: 
+----------------------
+git push origin -d branch_name
+
+Delete from local:
+------------------
+git branch -d branch_name
+git branch -D branch_name    //Remove forcely
