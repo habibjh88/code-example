@@ -105,4 +105,27 @@ if (!function_exists('get_post_views')) {
 
 
 
+/**
+ * Post view count PostX
+ * ====================================================================
+ * it saved the meta for oneday in client site by cookies
+ */
 
+
+add_action('wp', 'popular_posts_tracker_callback');
+function popular_posts_tracker_callback($post_id) {
+	if (!is_single()) { return; }
+	global $post;
+	$post_id = isset($post->ID) ? $post->ID : '';
+	$isEnable = apply_filters('ultp_view_cookies', true);
+	// add_filter( 'ultp_view_cookies', '__return_false' ); 
+	$cookies_disable = ultimate_post()->get_setting('disable_view_cookies');
+	if ($post_id && $isEnable && $cookies_disable != 'yes') {
+		$has_cookie = isset( $_COOKIE['ultp_view_'.$post_id] ) ? sanitize_text_field($_COOKIE['ultp_view_'.$post_id]) : false;
+		if (!$has_cookie) {
+			$count = (int)get_post_meta( $post_id, '__post_views_count', true );
+			update_post_meta($post_id, '__post_views_count', $count ? (int)$count + 1 : 1 );
+			setcookie( 'ultp_view_'.$post_id, 1, time() + 86400, COOKIEPATH ); // 1 days cookies
+		}
+	}
+}
