@@ -1,0 +1,3 @@
+Print Error log in current directory:
+-------------------------------------
+error_log( print_r( %END%, true ) . "\n\n" , 3, __DIR__ . '/log.txt' );

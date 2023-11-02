@@ -1,7 +1,10 @@
 
 // For defination check below example
 //======================================
-// getDerivedStateFromProps : The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
+
+// NB: The three phases are: Mounting, Updating, and Unmounting.
+
+// getDerivedStateFromProps : (static) The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
 // componentDidMount        : When DOM will be ready
 // getSnapshotBeforeUpdate  : Before update the state
 // componentDidUpdate       : When State will be updated
@@ -19,7 +22,7 @@ class App extends Component {
     };
   }
 
-  getDerivedStateFromProps(props, state) {
+  static getDerivedStateFromProps(props, state) {
     console.log('getDerivedStateFromProps')
     
     return null;

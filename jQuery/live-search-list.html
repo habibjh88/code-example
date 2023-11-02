@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="myInput" placeholder="Search...">
+    <br>
+    <ul id="myList">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+    </ul>
+    
+    <script>
+        var $ = jQuery;
+        $(document).ready(function(){
+            $('#myInput').on('keyup', function(e){
+                var value = $(this).val().toLowerCase();
+                $('#myList li').filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+            });
+        })
+    </script>
+
+
+</body>
+</html>
