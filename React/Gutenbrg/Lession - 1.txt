@@ -1,5 +1,8 @@
 Github Repo for Gutenberg - https://github.com/WordPress/gutenberg/tree/trunk/packages
 
+//import 
+//const {select, subscribe} = wp.data;
+
 1.  wp.data.select("core/edit-post")
     edit-post store contains the editor's UI information like, as we mentioned, is this sidebar opened or closed and so on.
 
@@ -20,3 +23,6 @@ Github Repo for Gutenberg - https://github.com/WordPress/gutenberg/tree/trunk/pa
 5.  Open edit post sidebar / Dispatch - প্রেরণ
     wp.data.dispatch("core/edit-post").openGeneralSidebar("edit-post/block");
 
+7.  wp.data.subscribe() // Registers a function called any time the value of state changes. একটি ফাংশন নিবন্ধন করে এবং যে কোনো সময় state এর মান পরিবর্তন হলে ফাংশন টা কলে করে ।
+    Example:
+    const unsubscribe = subscribe((_) => setHeaders());  //It return a unsubscribe function. That should called in componentWillUnmount() lifecycle.
