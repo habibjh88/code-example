@@ -1,2 +1,12 @@
 //get IP from cmd
 ipconfig
+
+
+Chrome tab reload automatically fixed
+chrome://settings/performance 
+
+
+//Responsive font-size || width/height
+height: clamp(460px, 40vw, 740px);
+clamp(minVal, 100vw-40vw = 60vw, maxVal)
+That means the clamp function works when the window resizes between 100vw to 60vw 
