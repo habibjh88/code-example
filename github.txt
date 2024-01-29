@@ -21,7 +21,53 @@ ssh-keygen -t ed25519 -C "habibjh88@gmail.com"
 ----------------------
 git push origin -d branch_name
 
+
 Delete from local:
 ------------------
 git branch -d branch_name
 git branch -D branch_name    //Remove forcely
+
+
+# Git Advance - https://www.kdnuggets.com/10-advanced-git-techniques 
+====================================================================
+=> Git add and commit together
+--------------
+git commit -am "new project"
+
+=> Rename current commit:
+--------------
+git commit --amend -m "Love"
+
+=> Include additional changes to the current commit before pushing
+--------------
+git add . 
+git commit --amend --no-edit
+
+=> Git Revert:
+--------------
+git log --oneline      //Show logs in one line
+git revert 8f184d5     //To undo a commit in Git
+
+=> Git stash: 
+-------------
+normal use
+-----------
+git stash
+git stash pop 
+
+Advance use
+------------ 
+git stash save new-idea       //save current progress by name 
+git stash list                //show the list of satsh
+git stash apply 0             //stash pop by index
+
+
+=> Rename branch name: Say your branche is now (master)
+----------------------
+git branch -M main
+
+Switch Back Branch: it will work toggle switch
+----------------------------------------------
+git checkout -
+
+
