@@ -1,0 +1,15 @@
+.form-wrapper {
+    width: 800px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+[data-status=error] .form-control {
+    border: 1px solid #f00;
+}
+
+[data-status=success] .form-control {
+    border: 1px solid green;
+}
