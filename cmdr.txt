@@ -1,0 +1,6 @@
+Settings > Startup > Task > new task click by ( + ) button
+copy full path from {cmd::Cmder} and peset in the box of new task and then choose the Startup dir...
+
+change default task from General > Choose your startup task:
+
+Enjoy 
