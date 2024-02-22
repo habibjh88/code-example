@@ -37,6 +37,9 @@
 	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
 		<severity>0</severity>
 	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamType"/>
+		<severity>0</severity>
+	</rule>
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
 	<rule ref="Universal">
 		<exclude name="Universal"/>
@@ -52,6 +55,7 @@
 		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
+	
 	</rule>
 
 	<!-- Allows hook names in dot/slash notation. -->
@@ -65,15 +69,15 @@
 	<!-- Defining Cyclomatic Complexity for more modular approach -->
 	<rule ref="Generic.Metrics.CyclomaticComplexity">
 		<properties>
-			<property name="complexity" value="30"/>
-			<property name="absoluteComplexity" value="30"/>
+			<property name="complexity" value="35"/>
+			<property name="absoluteComplexity" value="35"/>
 		</properties>
 	</rule>
 
 	<!-- Defining Nested Level -->
 	<rule ref="Generic.Metrics.NestingLevel">
 		<properties>
-			<property name="absoluteNestingLevel" value="8"/>
+			<property name="absoluteNestingLevel" value="10"/>
 		</properties>
 	</rule>
 

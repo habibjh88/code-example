@@ -1,5 +1,16 @@
-git pull --rebase
+# Git basic comand:
+=======================
 
+git status
+git add .
+git commit -m "your commit"
+git pull origin <remove origin> (main, master, dev etc)
+git push origin <remove origin> (main, master, dev etc)
+-------------
+git stash
+git stash pop
+
+Iportant: when you start work in a git project anytime, first you should pull from remove: Ex- (git pull origin main)
 
 # Git config 
 =========================
@@ -27,9 +38,27 @@ Delete from local:
 git branch -d branch_name
 git branch -D branch_name    //Remove forcely
 
+=> Get git commit only 
+------------------------
+git log --format=%B
+
+
+
+
+
+
+
+
+
+
+
 
 # Git Advance - https://www.kdnuggets.com/10-advanced-git-techniques 
 ====================================================================
+
+
+
+
 => Git add and commit together
 --------------
 git commit -am "new project"
