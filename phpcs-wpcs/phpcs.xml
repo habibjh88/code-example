@@ -37,9 +37,6 @@
 	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Squiz.Commenting.FunctionComment.MissingParamType"/>
-		<severity>0</severity>
-	</rule>
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
 	<rule ref="Universal">
 		<exclude name="Universal"/>
@@ -55,7 +52,9 @@
 		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
-	
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamType"/>
+		<exclude name="WordPress.PHP.StrictInArray.MissingTrueStrict"/>
 	</rule>
 
 	<!-- Allows hook names in dot/slash notation. -->
