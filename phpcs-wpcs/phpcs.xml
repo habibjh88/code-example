@@ -33,14 +33,33 @@
 		</properties>
 	</rule> -->
 
-	<!-- Allow short array syntax -->
+	<!-- Allow short array syntax --> 
 	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found"/>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamType">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.PHP.StrictInArray.MissingTrueStrict">
+		<severity>0</severity>
+	</rule>
 	<rule ref="Universal">
 		<exclude name="Universal"/>
 	</rule>
+	 <rule ref="PEAR.Functions.FunctionCallSignature">
+		<properties>
+		<property name="requiredSpacesAfterOpen" value="1"/>
+		<property name="requiredSpacesBeforeClose" value="1"/>
+		</properties>
+		<severity>0</severity>
+	</rule>
+	
 
 	<!-- Adds exceptions in files and variables naming conventions. -->
 	<rule ref="WordPress">
