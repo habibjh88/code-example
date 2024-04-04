@@ -1,0 +1,4 @@
+Speed optimization 
+1. Use single quote
+2. Use , rather than . For concat 
+3. 
