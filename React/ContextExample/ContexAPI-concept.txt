@@ -1,0 +1,28 @@
+import React, { Component, createContext } from 'react';
+
+const Context = createContext();
+
+const state = {
+    test: 'Test Val', 
+    test2: "Test2 Val"
+}
+
+// Step1: Make a Provide 
+
+<Context.Provider value={...state, newVal:'NewVal' }>
+    <YourContent>
+
+    </YourContent>
+</Context.Provider>
+
+// Step2: Make a Consumer
+
+<Context.Consumer>
+    {
+        (value) => {
+            <YourContent>
+                {/* You can use the value everywhere */}
+            </YourContent>
+        }
+    }
+</Context.Consumer>
