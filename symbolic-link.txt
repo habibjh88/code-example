@@ -1,0 +1,7 @@
+In Mac:
+=========
+ln -s "/Users/habib/projects/the-post-grid" "/Users/habib/Local Sites/client-test/app/public/wp-content/plugins"
+
+In Windows:
+===========
+mklink /D "C:\Documents and Settings\UserName\My Documents\My Dropbox\My Games" "C:\Documents and Settings\UserName\My Documents\My Games"
