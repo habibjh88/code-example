@@ -1,6 +1,6 @@
 In Mac:
 =========
-ln -s "/Users/habib/projects/the-post-grid" "/Users/habib/Local Sites/client-test/app/public/wp-content/plugins"
+ln -s "/Users/habib/projects/gutenberg-users" "/Users/habib/Local Sites/user-gird/app/public/wp-content/plugins"
 
 In Windows:
 ===========
