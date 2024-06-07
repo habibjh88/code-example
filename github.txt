@@ -6,6 +6,9 @@ git add .
 git commit -m "your commit"
 git pull origin <remove origin> (main, master, dev etc)
 git push origin <remove origin> (main, master, dev etc)
+
+git pull --rebase origin main  //If any confilict
+
 -------------
 git stash
 git stash pop
