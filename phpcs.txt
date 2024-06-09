@@ -1,1 +1,4 @@
 check phpcs-wpcs folder
+
+Ignore coding standard 
+// @codingStandardsIgnoreStart
