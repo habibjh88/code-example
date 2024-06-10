@@ -14,4 +14,4 @@ That means the clamp function works when the window resizes between 100vw to 60v
 
 //Remove all .DS_Store file from projec. Just run the below command in the terminal
 
-find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+find . -name ".DS_Store" -print -delete
