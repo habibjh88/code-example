@@ -9,6 +9,7 @@ process:
     phpcs -i //available integrations
 
     phpcs --version 
+    which phpcs
     
 2. WPCS - https://github.com/WordPress/WordPress-Coding-Standards
     Composer Global Installation:
