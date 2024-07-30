@@ -20,7 +20,9 @@ https://xdebug.org/wizard.php
 
 
 
-Install WP CLI 
+
+
+Install WP CLI / wpcli
 -------------------------------------------------
 
 1. Download wp-cli.phar file from ===> https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
@@ -32,6 +34,8 @@ Install WP CLI
 5. Add [ php ] path
 4. after added php path just add [ c:\wp-cli ] to your path
 5. Restart your PC
+
+
 
 
 Disable PhpMyadmin error 

@@ -17,6 +17,34 @@ function wpdbdemo_init() {
 	);";
     require_once ABSPATH . "wp-admin/includes/upgrade.php";
     dbDelta( $sql );
+
+
+    //Add column later (This is not the part of this tutorial. I did it in rtcl-job-board)
+
+    if ( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) == $table_name ) {
+        // Check if the column already exists
+        $column_exists = $wpdb->get_results( "SHOW COLUMNS FROM `$table_name` LIKE 'listing_id'" );
+
+        //If column will be empty insert new column
+        if ( empty( $column_exists ) ) {
+            $wpdb->query( "ALTER TABLE $table_name ADD listing_id int(10) UNSIGNED DEFAULT NULL" );
+        }
+    } else {
+        $charset_collate = $wpdb->get_charset_collate();
+
+        $sql = "CREATE TABLE $table_name (
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
+            application_data longtext NOT NULL,
+            user_id int(10) UNSIGNED DEFAULT NULL,
+            listing_id int(10) UNSIGNED DEFAULT NULL,
+            created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (id)
+        ) $charset_collate;";
+
+        require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+        dbDelta( $sql );
+    }
 }
 
 register_activation_hook( __FILE__, "wpdbdemo_init" );
