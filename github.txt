@@ -10,6 +10,11 @@ git push origin <remove origin> (main, master, dev etc)
 git pull --rebase origin main  //If any confilict
 git pull --ff-only origin main  //If any confilict
 
+Reset to a specific hash / log
+------------------------------
+git reset --hard 877f0ef402962080bdeb00f844be30a857ecaf66
+git push --force origin main
+
 -------------
 git stash
 git stash pop
