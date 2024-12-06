@@ -1,7 +1,10 @@
 In Mac:
 =========
-ln -s "/Users/habib/projects/gutenberg-users" "/Users/habib/Local Sites/user-gird/app/public/wp-content/plugins"
+ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid" "/Users/habib/Local Sites/postgrid-custom-work/app/public/wp-content/plugins"
+ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid-pro" "/Users/habib/Local Sites/postgrid-custom-work/app/public/wp-content/plugins"
 
 In Windows:
 ===========
 mklink /D "C:\Documents and Settings\UserName\My Documents\My Dropbox\My Games" "C:\Documents and Settings\UserName\My Documents\My Games"
+
+

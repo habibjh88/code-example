@@ -1,0 +1,12 @@
+svn co https://example.com/exampleProjectID/
+svn up .
+svn status
+svn st | awk '/\!/ {print $2}' | xargs svn rm --force
+svn st | awk '/\?/ {print $2}' | xargs svn add
+
+svn ci -m 'Adding the first version of my plugin' --username 'habibjh88' --password 'IDIE0Eth)nPo*t0b'
+
+
+
+
+
