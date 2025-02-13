@@ -3,6 +3,13 @@ In Mac:
 ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid" "/Users/habib/Local Sites/postgrid-custom-work/app/public/wp-content/plugins"
 ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid-pro" "/Users/habib/Local Sites/postgrid-custom-work/app/public/wp-content/plugins"
 
+
+ln -s "/Users/habib/Local Sites/homlisti/app/public/wp-content/themes/homlisti" "/Users/habib/Local Sites/homlisti-old/app/public/wp-content/themes/homlisti"
+
+ln -s "/Users/habib/Local Sites/classified-listing/app/public/wp-content/plugins/rtcl-job-manager" "/Users/habib/Local Sites/test/app/public/wp-content/plugins/rtcl-job-manager"
+
+
+
 In Windows:
 ===========
 mklink /D "C:\Documents and Settings\UserName\My Documents\My Dropbox\My Games" "C:\Documents and Settings\UserName\My Documents\My Games"

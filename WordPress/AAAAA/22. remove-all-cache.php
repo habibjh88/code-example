@@ -1,6 +1,8 @@
 <?php 
 
 //Remove all cache manually
+//tag: remove cache, cache remove
+
 site_cache_clear();
 function site_cache_clear() {
     wp_cache_flush();

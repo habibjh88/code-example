@@ -46,13 +46,17 @@
 	<rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
 		<severity>0</severity>
 	</rule>
+
+	<rule ref="Squiz.PHP.DisallowMultipleAssignments.Found">
+		<severity>0</severity>
+	</rule>
+
 	<rule ref="WordPress.PHP.StrictInArray.MissingTrueStrict">
 		<severity>0</severity>
 	</rule>
 	<rule ref="Universal">
 		<exclude name="Universal"/>
 	</rule>
-	
 
 	<!-- Adds exceptions in files and variables naming conventions. -->
 	<rule ref="WordPress">
@@ -66,6 +70,7 @@
 		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag"/>
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
 		<exclude name="Squiz.Commenting.FunctionComment.MissingParamType"/>
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda" />
 	</rule>
 
 	<!-- Allows hook names in dot/slash notation. -->
