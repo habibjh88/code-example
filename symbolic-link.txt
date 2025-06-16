@@ -1,7 +1,10 @@
 In Mac:
 =========
-ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid" "/Users/habib/Local Sites/postgrid-custom-work/app/public/wp-content/plugins"
-ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid-pro" "/Users/habib/Local Sites/postgrid-custom-work/app/public/wp-content/plugins"
+ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid" "/Users/habib/Local Sites/client-internavigare/app/public/wp-content/plugins" &&
+ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid-pro" "/Users/habib/Local Sites/client-internavigare/app/public/wp-content/plugins"
+
+ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/tlp-food-menu" "/Users/habib/Local Sites/classima/app/public/wp-content/plugins"
+ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/food-menu-pro" "/Users/habib/Local Sites/classima/app/public/wp-content/plugins"
 
 
 ln -s "/Users/habib/Local Sites/homlisti/app/public/wp-content/themes/homlisti" "/Users/habib/Local Sites/homlisti-old/app/public/wp-content/themes/homlisti"

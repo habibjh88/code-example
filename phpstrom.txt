@@ -1,0 +1,2 @@
+Force quiet = Cmd + Opt + esc
+select all case-sensitively matching words = Сmd + Ctrl + G 

@@ -1,12 +1,6 @@
-svn co https://plugins.svn.wordpress.org/user-grid
+svn co https://plugins.svn.wordpress.org/advanced-news-ticker/
 svn up .
 svn status
-svn st | awk '/\!/ {print $2}' | xargs svn rm --force
-svn st | awk '/\?/ {print $2}' | xargs svn add
+svn st | awk '/\!/ {print $2}' | xargs svn rm --force && svn st | awk '/\?/ {print $2}' | xargs svn add
 
-svn ci -m 'Adding the first version of my plugin' --username 'username' --password 'password'
-
-
-
-
-
+svn ci -m '1.0.4 version release' --username 'username' --password 'password'

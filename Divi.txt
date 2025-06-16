@@ -1,0 +1,372 @@
+1. advanced_fields:
+
+'fonts' => this is special. We need to pass the advanced tab toggles id as font id: like the below one
+Here "section_title" is the advanced tab toggle id 
+'fonts'          => array(
+    'section_title' => array( //this is id
+        ....[] required setings
+        'toggle_slug' => 'section_title', //options if the id is same 
+    ),
+     'post_title' => array( //this is id
+        ....[] required setings
+        'toggle_slug' => 'post_title', //options if the id is same 
+    ),
+),
+
+
+
+2. 'form_field' this array is used for making dynamically section under the advanced tab. 
+    'form_field'     => array[
+				'fields'         => array[
+                    'label'           => esc_html__( 'Fields 1', 'et_builder' ), // section name
+                ], //you can make many more fields in this array 
+                'fields2'         => array[
+                     'label'           => esc_html__( 'Fields 2', 'et_builder' ), // section name
+                ], //you can make many more fields in this array 
+                ];
+
+
+
+// Here some real code with explanation:
+========================================
+
+	public function init() {
+		$this->name        = esc_html__( 'Woo Product Add To Cart', 'et_builder' );
+		$this->plural      = esc_html__( 'Woo Product Add To Cart', 'et_builder' );
+		$this->slug        = 'et_pb_wc_add_to_cart';
+		$this->vb_support  = 'on';
+		$this->folder_name = 'et_pb_woo_modules';
+
+		$this->settings_modal_toggles = [
+			'general'  => [
+				'toggles' => [
+					'main_content' => et_builder_i18n( 'Content' ),
+					'elements'     => et_builder_i18n( 'Elements' ),
+				],
+			],
+			'advanced' => [
+				'toggles' => [
+					'field_label' => [
+						'title' => esc_html__( 'Field Labels', 'et_builder' ),
+					],
+					'text'       => array( //TODO: text is a default section under Advanced Tab. Here we modify text section
+						'title'             => et_builder_i18n( 'Text' ),
+						'priority'          => 45,
+						'tabbed_subtoggles' => true,
+						'bb_icons_support'  => true,
+						'sub_toggles'       => array(
+							'p' => array(
+								'name' => 'P',
+								'icon' => 'text-left',
+							),
+							'a' => array(
+								'name' => 'A',
+								'icon' => 'text-link',
+							),
+						),
+					),
+					'header'      => [
+						'title'             => esc_html__( 'Heading Text', 'et_builder' ),
+						'priority'          => 49,
+						'tabbed_subtoggles' => true,
+						'sub_toggles'       => [
+							'h1' => [
+								'name' => 'H1',
+								'icon' => 'text-h1',
+							],
+							'h2' => [
+								'name' => 'H2',
+								'icon' => 'text-h2',
+							],
+							'h3' => [
+								'name' => 'H3',
+								'icon' => 'text-h3',
+							],
+							'h4' => [
+								'name' => 'H4',
+								'icon' => 'text-h4',
+							],
+							'h5' => [
+								'name' => 'H5',
+								'icon' => 'text-h5',
+							],
+							'h6' => [
+								'name' => 'H6',
+								'icon' => 'text-h6',
+							],
+						],
+					],
+					'width'       => [
+						'title'    => et_builder_i18n( 'Sizing' ),
+						'priority' => 80,
+					],
+				],
+			],
+		];
+
+		$this->advanced_fields = [
+			'fonts'          => [ //TODO: the Fonts cant add directly as a section so we need to to add this under a section of the Destign tab
+				'field_label' => [ //TODO: This is a section id [advanced > toggles > field_label]
+					'label'       => esc_html__( 'Field Labels - Hello', 'et_builder' ),
+					'css'         => [
+						'main' => implode(
+							',',
+							[
+								'%%order_class%% label',
+							]
+						),
+					],
+					'font'        => [
+						'default' => '|700|||||||',
+					],
+					'font_size'   => [
+						'default' => '14px',
+					],
+					'toggle_slug' => 'field_label',
+				],
+			],
+			'background'     => [ //TODO: all alpha color for all background in the Design/advanced tab (Optional)
+				'settings' => [
+					'color' => 'alpha', // optional, as 'solid' is often the default
+				],
+			],
+			'margin_padding' => [ //TODO: All margin padding fields will apply !important in the CSS in the Design/advanced tab
+				'css' => [
+					'important' => 'all',
+				],
+			],
+			'text'           => array( //TODO: This Text section follow the above toggles under advanced tab
+				'css'                   => array(
+					'text_orientation' => '%%order_class%%',
+				),
+				'use_background_layout' => true,
+				'sub_toggle'            => 'p',
+				'options'               => array(
+					'text_orientation'  => array(
+						'default' => 'left',
+					),
+					'background_layout' => array(
+						'default' => 'light',
+						'hover'   => 'tabs',
+					),
+				),
+			),
+			'text_shadow'    => array( //TODO: it's a part of text above
+				// Don't add text-shadow fields since they already are via font-options.
+				'default' => false,
+			),
+			'button'         => [ //TODO: It will make a separate section named 'Button' under the Design tab
+				'button' => [
+					'label'          => et_builder_i18n( 'Button asdfasdfa' ),
+					'css'            => [
+						'main'         => '%%order_class%% .button',
+						'limited_main' => '%%order_class%% .button',
+						'alignment'    => '%%order_class%% .et_pb_module_inner > form',
+						// Setting to TRUE since it only checks for the value's existence.
+						'important'    => 'all',
+					],
+
+					/*
+					 * Button inside add to cart module is rendered from WooCommerce's default
+					 * template which makes its positioning isn't flexible. Thus button alignment
+					 * is removed.
+					 */
+					'use_alignment'  => false,
+					'box_shadow'     => [
+						'css' => [
+							'main'      => '%%order_class%% .button',
+							'important' => true,
+						],
+					],
+					'use_icon'       => false,
+					'margin_padding' => [
+						'css' => [
+							'important' => 'all',
+						],
+					],
+				],
+			],
+			'form_field'     => [ //TODO: If you need separate new section with all advanced fields you need to add them here. Otherwise you can't add advanced fields more then one at a time.
+				'fields'         => [
+					'label'           => esc_html__( 'Fields - MyFields', 'et_builder' ),
+					'toggle_priority' => 67,
+					'css'             => [
+						'main'                   => '%%order_class%% input, %%order_class%% .quantity input.qty',
+						'background_color'       => '%%order_class%% input, %%order_class%% .quantity input.qty',
+						'background_color_hover' => '%%order_class%% input:hover, %%order_class%% .quantity input.qty:hover',
+						'focus_background_color' => '%%order_class%% input:focus, %%order_class%% select:focus, %%order_class%% .quantity input.qty:focus',
+						'form_text_color'        => '%%order_class%% input, %%order_class%% select, %%order_class%% .quantity input.qty',
+						'form_text_color_hover'  => '%%order_class%% input[type="text"]:hover, %%order_class%% select:hover, %%order_class%% .quantity input.qty:hover',
+						'focus_text_color'       => '%%order_class%% input:focus, %%order_class%% .quantity input.qty:focus',
+						'placeholder_focus'      => '%%order_class%% input:focus::-webkit-input-placeholder, %%order_class%% input:focus::-moz-placeholder, %%order_class%% input:focus:-ms-input-placeholder, %%order_class%% textarea:focus::-webkit-input-placeholder, %%order_class%% textarea:focus::-moz-placeholder, %%order_class%% textarea:focus:-ms-input-placeholder',
+						'padding'                => '%%order_class%% input',
+						'margin'                 => '%%order_class%%',
+						'important'              => [
+							'background_color',
+							'background_color_hover',
+							'focus_background_color',
+							'form_text_color',
+							'form_text_color_hover',
+							'text_color',
+							'focus_text_color',
+							'padding',
+							'margin',
+						],
+					],
+					'box_shadow'      => [
+						'name'              => 'fields',
+						'css'               => [
+							'main' => '%%order_class%% input',
+						],
+						'default_on_fronts' => [
+							'color'    => '',
+							'position' => '',
+						],
+					],
+					'border_styles'   => [
+						'fields'       => [
+							'name'         => 'fields',
+							'css'          => [
+								'main'      => [
+									'border_radii'  => '%%order_class%% input, %%order_class%% .quantity input.qty',
+									'border_styles' => '%%order_class%% input, %%order_class%% .quantity input.qty',
+									'defaults'      => [
+										'border_radii'  => 'on|3px|3px|3px|3px',
+										'border_styles' => [
+											'width' => '0px',
+											'style' => 'none',
+										],
+									],
+								],
+								'important' => 'all',
+							],
+							'label_prefix' => esc_html__( 'Fields', 'et_builder' ),
+						],
+						'fields_focus' => [
+							'name'         => 'fields_focus',
+							'css'          => [
+								'main'      => [
+									'border_radii'  => '%%order_class%% input:focus, %%order_class%% .quantity input.qty:focus',
+									'border_styles' => '%%order_class%% input:focus, %%order_class%% .quantity input.qty:focus',
+								],
+								'important' => 'all',
+							],
+							'label_prefix' => esc_html__( 'Fields Focus', 'et_builder' ),
+						],
+					],
+					'font_field'      => [
+						'css'         => [
+							'main'      => [
+								'%%order_class%% input, %%order_class%% .quantity input.qty',
+							],
+							'hover'     => [
+								'%%order_class%% input:hover',
+								'%%order_class%% input:hover::-webkit-input-placeholder',
+								'%%order_class%% input:hover::-moz-placeholder',
+								'%%order_class%% input:hover:-ms-input-placeholder',
+							],
+							'important' => 'all',
+						],
+						'font_size'   => [
+							'default' => '20px',
+						],
+						'line_height' => [
+							'default' => '1em',
+						],
+					],
+					'margin_padding'  => [
+						'css' => [
+							'main'      => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations tr',
+							'important' => [ 'custom_padding' ],
+						],
+					],
+				],
+				'dropdown_menus' => [
+					'label'           => esc_html__( 'Dropdown Menus', 'et_builder' ),
+					'toggle_priority' => 67,
+					'css'             => [
+						'main'                   => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select',
+						'background_color'       => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select',
+						'background_color_hover' => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select:hover',
+						'focus_background_color' => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select:focus',
+						'form_text_color'        => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select',
+						'form_text_color_hover'  => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select + label:hover, %%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select:hover',
+						'focus_text_color'       => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select option:focus, %%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select + label',
+						'placeholder_focus'      => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select:focus, %%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select + label:focus',
+						'margin_padding'         => [
+							'css' => [
+								'main'      => '%%order_class%% select',
+								'important' => [ 'all' ],
+							],
+						],
+						'important'              => [
+							'text_color',
+							'form_text_color',
+							'margin_padding',
+						],
+					],
+					'margin_padding'  => [
+						'use_padding' => false,
+					],
+					'box_shadow'      => [
+						'name' => 'dropdown_menus',
+						'css'  => [
+							'main' => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select',
+						],
+					],
+					'border_styles'   => [
+						'dropdown_menus' => [
+							'name'         => 'dropdown_menus',
+							'css'          => [
+								'main'      => [
+									'border_styles' => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select',
+									'border_radii'  => '%%order_class%%.et_pb_module .et_pb_module_inner form.cart .variations td select',
+								],
+								'important' => 'all',
+							],
+							'label_prefix' => esc_html__( 'Dropdown Menus', 'et_builder' ),
+							'use_radius'   => false,
+						],
+					],
+					'font_field'      => [
+						'css'              => [
+							'main'      => [
+								'%%order_class%% select',
+							],
+							'hover'     => [
+								'%%order_class%% select:hover',
+							],
+							'important' => 'all',
+						],
+						'font_size'        => [
+							'default' => '12px',
+						],
+						'hide_line_height' => true,
+						'hide_text_align'  => true,
+					],
+				],
+			],
+		];
+
+		$this->custom_css_fields = [
+			'fields'         => [
+				'label'    => esc_html__( 'Fields', 'et_builder' ),
+				'selector' => 'input',
+			],
+			'dropdown_menus' => [
+				'label'    => esc_html__( 'Dropdown Menus', 'et_builder' ),
+				'selector' => 'select',
+			],
+			'buttons'        => [
+				'label'    => esc_html__( 'Buttons', 'et_builder' ),
+				'selector' => '.button',
+			],
+		];
+
+		$this->help_videos = [
+			[
+				'id'   => '7X03vBPYJ1o',
+				'name' => esc_html__( 'Divi WooCommerce Modules', 'et_builder' ),
+			],
+		];
+	}

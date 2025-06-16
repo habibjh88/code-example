@@ -1,0 +1,10 @@
+1.  First make this file 'wp-install.sh' exicutable.
+    chmod +x ./wp-install.sh && ./wp-install.sh
+
+2.  Download 'mysql'
+    brew install mysql
+
+3.  Download 'dbeaver' to access mysql table and connect with mysql
+    https://dbeaver.io/
+
+4.  

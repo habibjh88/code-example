@@ -1,0 +1,3 @@
+
+1.  Slow start fast ending : from divi theme search show hide. It will help to show slide 
+    cubic-bezier(0.77, 0, 0.175, 1)
