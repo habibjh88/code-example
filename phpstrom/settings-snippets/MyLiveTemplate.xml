@@ -1,0 +1,331 @@
+<templateSet group="MyLiveTemplate">
+  <template name="el_text" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::TEXT,&#10;        'default' =&gt; esc_html__( 'Default title', '$DOMAIN$' ),&#10;        'placeholder' =&gt; esc_html__( 'Type your title here', '$DOMAIN$' ),&#10;        'dynamic' =&gt; [&#10;&#9;&#9;&#9;'active' =&gt; true,&#10;&#9;&#9;],&#10;    ]&#10;);" description="Text" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_number" value="$this-&gt;add_control( '$ID$', [&#10;    'label' =&gt; __( '$LABEL$', '$DOMAIN$' ),  &#10;    'type'  =&gt; Controls_Manager::NUMBER,  &#10;    'min'   =&gt; $MIN$,  &#10;    'max'   =&gt; $MAX$,  &#10;    'step'  =&gt; $STEP$,&#10;    'default' =&gt; '',&#10;] );" description="Number" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="number_id" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="Number Label" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="plugin-name" alwaysStopAt="true" />
+    <variable name="MIN" expression="" defaultValue="0" alwaysStopAt="true" />
+    <variable name="MAX" expression="" defaultValue="100" alwaysStopAt="true" />
+    <variable name="STEP" expression="" defaultValue="1" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_textarea" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::TEXTAREA,&#10;        'rows' =&gt; 10,&#10;        'default' =&gt; esc_html__( 'Default description', '$DOMAIN$' ),&#10;        'placeholder' =&gt; esc_html__( 'Type your description here', '$DOMAIN$' ),&#10;    ]&#10;);" description="Textarea" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_wysiwyg" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::WYSIWYG,&#10;        'default' =&gt; esc_html__( 'Default description', '$DOMAIN$' ),&#10;        'placeholder' =&gt; esc_html__( 'Type your description here', '$DOMAIN$' ),&#10;    ]&#10;);" description="WYSIWYG" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_code" value="$this-&gt;add_control( '$ID$', [&#10;&#9;'label'    =&gt; __( '$LABEL$', '$DOMAIN$' ),&#10;&#9;'type'     =&gt; Controls_Manager::CODE,&#10;&#9;'language' =&gt; '$LANGUAGE$',&#10;&#9;'rows' =&gt; 20,&#10;] );" description="Code" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LANGUAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_hidden" value="$this-&gt;add_control( '$ID$', [&#10;    'type'    =&gt; Controls_Manager::HIDDEN,  &#10;    'default' =&gt; '$DEFAULT$', &#10;] );" description="Hidden" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="hidden_id" alwaysStopAt="true" />
+    <variable name="DEFAULT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_switcher" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::SWITCHER,&#10;        'label_on' =&gt; esc_html__( 'Show', '$DOMAIN$' ),&#10;        'label_off' =&gt; esc_html__( 'Hide', '$DOMAIN$' ),&#10;        'return_value' =&gt; 'yes',&#10;        'default' =&gt; 'yes',&#10;    ]&#10;);" description="Switcher" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_select" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::SELECT,&#10;        'default' =&gt; 'solid',&#10;        'options' =&gt; [&#10;            '' =&gt; esc_html__( 'Default', '$DOMAIN$' ),&#10;            'none' =&gt; esc_html__( 'None', '$DOMAIN$' ),&#10;            'solid'  =&gt; esc_html__( 'Solid', '$DOMAIN$' ),&#10;            'dashed' =&gt; esc_html__( 'Dashed', '$DOMAIN$' ),&#10;            'dotted' =&gt; esc_html__( 'Dotted', '$DOMAIN$' ),&#10;            'double' =&gt; esc_html__( 'Double', '$DOMAIN$' ),&#10;        ],&#10;        'selectors' =&gt; [&#10;            '{{WRAPPER}} .your-class' =&gt; 'border-style: {{VALUE}};',&#10;        ],&#10;    ]&#10;);" description="Select" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_color" value="$this-&gt;add_control( '$ID$', [  &#10;    'label' =&gt; __( '$LABEL$', '$DOMAIN$' ),  &#10;    'type'  =&gt; Controls_Manager::COLOR,&#10;    'selectors' =&gt; [&#10;        '{{WRAPPER}} .your-class' =&gt; 'color: {{VALUE}}',&#10;    ],&#10;] );" description="Color Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="color_id" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="Color Label" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="plugin-name" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_media" value="$this-&gt;add_control( '$ID$', [&#10;    'label' =&gt; __( '$LABEL$', '$DOMAIN$' ),&#10;    'type'  =&gt; Controls_Manager::MEDIA, &#10;    'default' =&gt; [&#10;        'url' =&gt; \Elementor\Utils::get_placeholder_image_src(),&#10;    ],&#10;] );" description="Media Upload" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="media_id" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="Media Label" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="plugin-name" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_url" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::URL,&#10;        'options' =&gt; [ 'url', 'is_external', 'nofollow' ],&#10;        'default' =&gt; [&#10;            'url' =&gt; '',&#10;            'is_external' =&gt; true,&#10;            'nofollow' =&gt; true,&#10;            // 'custom_attributes' =&gt; '',&#10;        ],&#10;        'label_block' =&gt; true,&#10;    ]&#10;);" description="URL Input" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_icons" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$TEXTDOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::ICONS,&#10;        'default' =&gt; [&#10;            'value' =&gt; 'fas fa-circle',&#10;            'library' =&gt; 'fa-solid',&#10;        ],&#10;        'recommended' =&gt; [&#10;            'fa-solid' =&gt; [&#10;                'circle',&#10;                'dot-circle',&#10;                'square-full',&#10;            ],&#10;            'fa-regular' =&gt; [&#10;                'circle',&#10;                'dot-circle',&#10;                'square-full',&#10;            ],&#10;        ],&#10;    ]&#10;);&#10;" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXTDOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_repeater" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::REPEATER,&#10;        'fields' =&gt; [&#10;            [&#10;                'name' =&gt; 'list_title',&#10;                'label' =&gt; esc_html__( 'Title', '$DOMAIN$' ),&#10;                'type' =&gt; \Elementor\Controls_Manager::TEXT,&#10;                'default' =&gt; esc_html__( 'List Title' , '$DOMAIN$' ),&#10;                'label_block' =&gt; true,&#10;            ],&#10;            [&#10;                'name' =&gt; 'list_content',&#10;                'label' =&gt; esc_html__( 'Content', '$DOMAIN$' ),&#10;                'type' =&gt; \Elementor\Controls_Manager::WYSIWYG,&#10;                'default' =&gt; esc_html__( 'List Content' , '$DOMAIN$' ),&#10;                'show_label' =&gt; false,&#10;            ],&#10;            [&#10;                'name' =&gt; 'list_color',&#10;                'label' =&gt; esc_html__( 'Color', '$DOMAIN$' ),&#10;                'type' =&gt; \Elementor\Controls_Manager::COLOR,&#10;                'selectors' =&gt; [&#10;                    '{{WRAPPER}} {{CURRENT_ITEM}}' =&gt; 'color: {{VALUE}}'&#10;                ],&#10;            ]&#10;        ],&#10;        'default' =&gt; [&#10;            [&#10;                'list_title' =&gt; esc_html__( 'Title #1', '$DOMAIN$' ),&#10;                'list_content' =&gt; esc_html__( 'Item content. Click the edit button to change this text.', '$DOMAIN$' ),&#10;            ],&#10;            [&#10;                'list_title' =&gt; esc_html__( 'Title #2', '$DOMAIN$' ),&#10;                'list_content' =&gt; esc_html__( 'Item content. Click the edit button to change this text.', '$DOMAIN$' ),&#10;            ],&#10;        ],&#10;        'title_field' =&gt; '{{{ list_title }}}',&#10;    ]&#10;);" description="Repeater" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="repeater_id" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="Repeater Label" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="plugin-name" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_select_group" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; Controls_Manager::SELECT,&#10;        'groups' =&gt; [&#10;            [&#10;                'label' =&gt; esc_html__( 'None', '$DOMAIN$' ),&#10;                'options' =&gt; [&#10;                    '' =&gt; esc_html__( 'None', '$DOMAIN$' ),&#10;                ],&#10;            ],&#10;            [&#10;                'label' =&gt; esc_html__( 'Slide', '$DOMAIN$' ),&#10;                'options' =&gt; [&#10;                    'slide-from-right' =&gt; esc_html__( 'Slide In Right', '$DOMAIN$' ),&#10;                    'slide-from-left' =&gt; esc_html__( 'Slide In Left', '$DOMAIN$' ),&#10;                    'slide-from-top' =&gt; esc_html__( 'Slide In Up', '$DOMAIN$' ),&#10;                    'slide-from-bottom' =&gt; esc_html__( 'Slide In Down', '$DOMAIN$' ),&#10;                ],&#10;            ],&#10;            [&#10;                'label' =&gt; esc_html__( 'Zoom', '$DOMAIN$' ),&#10;                'options' =&gt; [&#10;                    'grow' =&gt; esc_html__( 'Grow', '$DOMAIN$' ),&#10;                    'shrink' =&gt; esc_html__( 'Shrink', '$DOMAIN$' ),&#10;                    'zoom-in' =&gt; esc_html__( 'Zoom In', '$DOMAIN$' ),&#10;                    'zoom-out' =&gt; esc_html__( 'Zoom Out', '$DOMAIN$' ),&#10;                ],&#10;            ],&#10;        ],&#10;        'prefix_class' =&gt; 'custom-animation-',&#10;    ]&#10;);" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_popover" value="$this-&gt;start_controls_section(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'tab' =&gt; \Elementor\Controls_Manager::TAB_STYLE,&#10;    ]&#10;);&#10;&#10;$this-&gt;add_control(&#10;    'border_popover_toggle',&#10;    [&#10;        'label' =&gt; esc_html__( 'Border', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::POPOVER_TOGGLE,&#10;        'label_off' =&gt; esc_html__( 'Default', '$DOMAIN$' ),&#10;        'label_on' =&gt; esc_html__( 'Custom', '$DOMAIN$' ),&#10;        'return_value' =&gt; 'yes',&#10;        'default' =&gt; 'yes',&#10;    ]&#10;);&#10;&#10;$this-&gt;start_popover();&#10;&#10;    $this-&gt;add_control();&#10;    &#10;    $this-&gt;add_control();&#10;    &#10;    $this-&gt;add_control();&#10;&#10;$this-&gt;end_popover();&#10;&#10;$this-&gt;end_controls_section();" description="WYSIWYG" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_select2" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::SELECT2,&#10;        'label_block' =&gt; true,&#10;        'multiple' =&gt; true,&#10;        'options' =&gt; [&#10;            'title'  =&gt; esc_html__( 'Title', '$DOMAIN$' ),&#10;            'description' =&gt; esc_html__( 'Description', '$DOMAIN$' ),&#10;            'button' =&gt; esc_html__( 'Button', '$DOMAIN$' ),&#10;        ],&#10;        'default' =&gt; [ 'title', 'description' ],&#10;    ]&#10;);" description="Switcher" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_choose" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( 'Alignment', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::CHOOSE,&#10;        'options' =&gt; [&#10;            'left' =&gt; [&#10;                'title' =&gt; esc_html__( 'Left', '$DOMAIN$' ),&#10;                'icon' =&gt; 'eicon-text-align-left',&#10;            ],&#10;            'center' =&gt; [&#10;                'title' =&gt; esc_html__( 'Center', '$DOMAIN$' ),&#10;                'icon' =&gt; 'eicon-text-align-center',&#10;            ],&#10;            'right' =&gt; [&#10;                'title' =&gt; esc_html__( 'Right', '$DOMAIN$' ),&#10;                'icon' =&gt; 'eicon-text-align-right',&#10;            ],&#10;        ],&#10;        'default' =&gt; 'center',&#10;        'toggle' =&gt; true,&#10;        'selectors' =&gt; [&#10;            '{{WRAPPER}} .your-class' =&gt; 'text-align: {{VALUE}};',&#10;        ],&#10;    ]&#10;);" description="Code" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_visual_choose" value="$this-&gt;add_control(&#10;    'layout',&#10;    [&#10;        'label' =&gt; esc_html__( 'Layout', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::VISUAL_CHOICE,&#10;        'label_block' =&gt; true,&#10;        'options' =&gt; [&#10;            'grid-3' =&gt; [&#10;                'title' =&gt; esc_attr__( 'Grid: 3 columns.', '$DOMAIN$' ),&#10;                'image' =&gt; plugins_url( 'assets/img/grid-3.svg', __FILE__ ),&#10;            ],&#10;            'masonry' =&gt; [&#10;                'title' =&gt; esc_attr__( 'Masonry: arbitrary order', '$DOMAIN$' ),&#10;                'image' =&gt; plugins_url( 'assets/img/masonry.svg', __FILE__ ),&#10;            ],&#10;            'stacked' =&gt; [&#10;                'title' =&gt; esc_attr__( 'Stacked: Single column.', '$DOMAIN$' ),&#10;                'image' =&gt; plugins_url( 'assets/img/stacked.svg', __FILE__ ),&#10;            ],&#10;            'focus' =&gt; [&#10;                'title' =&gt; esc_attr__( 'Focus: Text only.', '$DOMAIN$' ),&#10;                'image' =&gt; plugins_url( 'assets/img/focus.svg', __FILE__ ),&#10;            ],&#10;            'grid-2' =&gt; [&#10;                'title' =&gt; esc_attr__( 'Grid: 2 columns.', '$DOMAIN$' ),&#10;                'image' =&gt; plugins_url( 'assets/img/grid2.svg', __FILE__ ),&#10;            ],&#10;            'stretch' =&gt; [&#10;                'title' =&gt; esc_attr__( 'Stretch: fit available width.', '$DOMAIN$' ),&#10;                'image' =&gt; plugins_url( 'assets/img/stretch.svg', __FILE__ ),&#10;            ]&#10;        ],&#10;        'default' =&gt; 'masonry',&#10;        'columns' =&gt; 2,&#10;        'prefix_class' =&gt; '$DOMAIN$-layout-',&#10;    ]&#10;);" description="Code" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_font" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::FONT,&#10;        'default' =&gt; &quot;'Open Sans', sans-serif&quot;,&#10;        'selectors' =&gt; [&#10;            '{{WRAPPER}} .your-class' =&gt; 'font-family: {{VALUE}}',&#10;        ],&#10;    ]&#10;);" description="Code" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_date_time" value="$this-&gt;add_control(&#10;    'date',&#10;    [&#10;        'label' =&gt; esc_html__( 'Date', 'textdomain' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::DATE_TIME,&#10;    ]&#10;);" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_gallery" value="$this-&gt;add_control(&#10;    'gallery',&#10;    [&#10;        'label' =&gt; esc_html__( 'Add Images', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::GALLERY,&#10;        'show_label' =&gt; false,&#10;        'default' =&gt; [],&#10;    ]&#10;);" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_animation" value="$this-&gt;add_control(&#10;    'entrance_animation',&#10;    [&#10;        'label' =&gt; esc_html__( 'Entrance Animation', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::ANIMATION,&#10;        'prefix_class' =&gt; 'animated ',&#10;    ]&#10;);" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_exit_animation" value="$this-&gt;add_control(&#10;    'exit_animation',&#10;    [&#10;        'label' =&gt; esc_html__( 'Exit Animation', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::EXIT_ANIMATION,&#10;        'prefix_class' =&gt; 'animated ',&#10;    ]&#10;);" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_hover_animatiion" value="$this-&gt;add_control(&#10;    'hover_animation',&#10;    [&#10;        'label' =&gt; esc_html__( 'Hover Animation', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::HOVER_ANIMATION,&#10;    ]&#10;);" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_image_dimension" value="$this-&gt;add_control(&#10;    'custom_dimension',&#10;    [&#10;        'label' =&gt; esc_html__( 'Image Dimension', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::IMAGE_DIMENSIONS,&#10;        'description' =&gt; esc_html__( 'Crop the original image size to any custom size. Set custom width or height to keep the original size ratio.', '$DOMAIN$' ),&#10;        'default' =&gt; [&#10;            'width' =&gt; '',&#10;            'height' =&gt; '',&#10;        ],&#10;    ]&#10;);" description="Image Dimension" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_text_shadow" value="$this-&gt;add_control(&#10;    'text_shadow',&#10;    [&#10;        'label' =&gt; esc_html__( 'Text Shadow', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::TEXT_SHADOW,&#10;        'selectors' =&gt; [&#10;            '{{SELECTOR}}' =&gt; 'text-shadow: {{HORIZONTAL}}px {{VERTICAL}}px {{BLUR}}px {{COLOR}};',&#10;        ],&#10;    ]&#10;);" description="Icon Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_box_shadow" value="$this-&gt;add_control(&#10;    'box_shadow',&#10;    [&#10;        'label' =&gt; esc_html__( 'Box Shadow', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::BOX_SHADOW,&#10;        'selectors' =&gt; [&#10;            '{{SELECTOR}}' =&gt; 'box-shadow: {{HORIZONTAL}}px {{VERTICAL}}px {{BLUR}}px {{SPREAD}}px {{COLOR}};',&#10;        ],&#10;    ]&#10;);" description="Box Shadow" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_slider" value="$this-&gt;add_control( //add_responsive_control&#10;    'width',&#10;    [&#10;        'label' =&gt; esc_html__( 'Width', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::SLIDER,&#10;        'size_units' =&gt; [ 'px', '%', 'em', 'rem', 'custom' ],&#10;        'range' =&gt; [&#10;            'px' =&gt; [&#10;                'min' =&gt; 0,&#10;                'max' =&gt; 1000,&#10;                'step' =&gt; 5,&#10;            ],&#10;            '%' =&gt; [&#10;                'min' =&gt; 0,&#10;                'max' =&gt; 100,&#10;            ],&#10;        ],&#10;        'default' =&gt; [&#10;            'unit' =&gt; '%',&#10;            'size' =&gt; 50,&#10;        ],&#10;        'selectors' =&gt; [&#10;            '{{WRAPPER}} .your-class' =&gt; 'width: {{SIZE}}{{UNIT}};',&#10;        ],&#10;    ]&#10;);" description="Slider" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_dimension" value="$this-&gt;add_control( //add_responsive_control&#10;    'margin$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( 'Margin$ID$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::DIMENSIONS,&#10;        'size_units' =&gt; [ 'px', '%', 'em', 'rem', 'custom' ],&#10;        'default' =&gt; [&#10;            'top' =&gt; 2,&#10;            'right' =&gt; 0,&#10;            'bottom' =&gt; 2,&#10;            'left' =&gt; 0,&#10;            'unit' =&gt; 'em',&#10;            'isLinked' =&gt; false,&#10;        ],&#10;        'selectors' =&gt; [&#10;            '{{WRAPPER}} .your-class' =&gt; 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',&#10;        ],&#10;    ]&#10;);" description="Dimension" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_heading" value="$this-&gt;add_control(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( '$LABEL$', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::HEADING,&#10;        'separator' =&gt; 'before',&#10;    ]&#10;);" description="Heading" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_raw_html" value="$this-&gt;add_control(&#10;    'important_note',&#10;    [&#10;        'label' =&gt; esc_html__( 'Important Note', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::RAW_HTML,&#10;        'raw' =&gt; esc_html__( 'A very important message to show in the panel.', '$DOMAIN$' ),&#10;        'content_classes' =&gt; 'your-class',&#10;    ]&#10;);" description="Heading" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_divider" value="$this-&gt;add_control(&#10;    'hr',&#10;    [&#10;        'type' =&gt; \Elementor\Controls_Manager::DIVIDER,&#10;    ]&#10;);" description="Divider" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_alert" value="$this-&gt;add_control(&#10;    'custom_panel_alert',&#10;    [&#10;        'type' =&gt; \Elementor\Controls_Manager::ALERT,&#10;        'alert_type' =&gt; 'warning', //info, success, danger&#10;        'heading' =&gt; esc_html__( 'Custom Alert', '$DOMAIN$' ),&#10;        'content' =&gt; esc_html__( 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$DOMAIN$' ) . ' &lt;a href=&quot;&quot;&gt;' . esc_html__( 'Learn more', '$DOMAIN$' ) . '&lt;/a&gt;',&#10;    ]&#10;);" description="DividerAlert" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_notice" value="$this-&gt;add_control(&#10;    'custom_panel_notice',&#10;    [&#10;        'type' =&gt; \Elementor\Controls_Manager::NOTICE,&#10;        'notice_type' =&gt; 'warning', //info, success, danger&#10;        'dismissible' =&gt; true,&#10;        'heading' =&gt; esc_html__( 'Custom Notice', '$DOMAIN$' ),&#10;        'content' =&gt; esc_html__( 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', '$DOMAIN$' ),&#10;    ]&#10;);" description="Notice" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_typography" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Typography::get_type(),&#10;    [&#10;        'name' =&gt; '$ID$',&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="Typo" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_stroke" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Text_Stroke::get_type(),&#10;    [&#10;        'name' =&gt; '$ID$',&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="Text Stroke" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_text_shadow_group" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Text_Shadow::get_type(),&#10;    [&#10;        'name' =&gt; 'text_shadow',&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="Text Shadow Group" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_box_shadow_group" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Box_Shadow::get_type(),&#10;    [&#10;        'name' =&gt; 'box_shadow',&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="Box Shadow Group" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_border_group" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Border::get_type(),&#10;    [&#10;        'name' =&gt; 'border',&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="Border Group" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_background_group" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Background::get_type(),&#10;    [&#10;        'name' =&gt; 'background',&#10;        'types' =&gt; [ 'classic', 'gradient', 'video' ],&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="background Group" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="image_size_group" value="$this-&gt;add_control(&#10;    'image',&#10;    [&#10;        'label' =&gt; esc_html__( 'Choose Image', '$DOMAIN$' ),&#10;        'type' =&gt; \Elementor\Controls_Manager::MEDIA,&#10;        'default' =&gt; [&#10;            'url' =&gt; \Elementor\Utils::get_placeholder_image_src(),&#10;        ],&#10;    ]&#10;);&#10;&#10;$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Image_Size::get_type(),&#10;    [&#10;        'name' =&gt; 'thumbnail', // Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.&#10;        'exclude' =&gt; [ 'custom' ],&#10;        'include' =&gt; [],&#10;        'default' =&gt; 'large',&#10;    ]&#10;);" description="Image Size Group" toReformat="true" toShortenFQNames="true">
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_css_filter" value="$this-&gt;add_group_control(&#10;    \Elementor\Group_Control_Css_Filter::get_type(),&#10;    [&#10;        'name' =&gt; 'custom_css_filters',&#10;        'selector' =&gt; '{{WRAPPER}} .your-class',&#10;    ]&#10;);" description="Css Filter" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_condition" value="'condition' =&gt; [&#10;    '$id$' =&gt; '$VALUE$',&#10;]," description="Condition" toReformat="true" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_conditions" value="'conditions' =&gt; [&#10;    'terms' =&gt; [&#10;        [&#10;            'name' =&gt; 'border',&#10;            'operator' =&gt; '===',&#10;            'value' =&gt; 'yes',&#10;        ],&#10;        [&#10;            'name' =&gt; 'border_style',&#10;            'operator' =&gt; '!==',&#10;            'value' =&gt; '',&#10;        ],&#10;    ],&#10;]," description="Conditions" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_tab" value="$this-&gt;start_controls_tabs(&#10;    'style_tabs'&#10;);&#10;&#10;$this-&gt;start_controls_tab(&#10;    'style_normal_tab',&#10;    [&#10;        'label' =&gt; esc_html__( 'Normal', 'textdomain' ),&#10;    ]&#10;);&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;end_controls_tab();&#10;&#10;$this-&gt;start_controls_tab(&#10;    'style_hover_tab',&#10;    [&#10;        'label' =&gt; esc_html__( 'Hover', 'textdomain' ),&#10;    ]&#10;);&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;end_controls_tab();&#10;&#10;$this-&gt;end_controls_tabs();" description="Tab" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="el_section" value="$this-&gt;start_controls_section(&#10;    '$ID$',&#10;    [&#10;        'label' =&gt; esc_html__( 'Content', '$DOMAIN$' ),&#10;        'tab' =&gt; \Elementor\Controls_Manager::TAB_STYLE, //TAB_CONTENT&#10;    ]&#10;);&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;add_control();&#10;&#10;$this-&gt;end_controls_section();" description="Section" toReformat="true" toShortenFQNames="true">
+    <variable name="ID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DOMAIN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="e_l" value="error_log( print_r( $END$, true ) . &quot;\n\n&quot; , 3, __DIR__ . '/log.txt' );" description="Error Log" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="_action" value="add_action( '$ACTION$', [ $this, '$CBF$' ] );" description="Action Hook" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CBF" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="_filter" value="add_filter( '$ACTION$', [ $this, '$CBF$' ] );" description="Filter Hook" toReformat="true" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CBF" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

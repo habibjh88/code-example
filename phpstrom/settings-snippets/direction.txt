@@ -1,0 +1,3 @@
+Root path for mac snipptest. Just copy xml file and keep the file in the below folder and restart the phpstrom press [cmd + shift + a] then search restart IDA.
+
+/Users/habib/Library/Application Support/JetBrains/PhpStorm2025.1/templates
