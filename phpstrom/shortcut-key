@@ -6,3 +6,4 @@ ctrl + shift + [1-9]        = for bookmark
 F2, Shift + F2              = Jump to the next or previous highlighted error.
 Ctrl + W, Ctrl + Shift + W  = Code block select
 Alt + F7                    = Show all places where a code element is used across your project.
+Ctl + Cmd + g               = select all same words

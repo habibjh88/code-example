@@ -53,7 +53,10 @@ git log --format=%B
 
 
 
-
+###Reset to a log
+-----------------------------
+git reset --hard 7028b8a39a485325265bb0a7523f0278e9ddeb0c
+git push origin HEAD --force
 
 
 

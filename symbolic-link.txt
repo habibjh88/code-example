@@ -1,13 +1,13 @@
 In Mac:
 =========
-ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid" "/Users/habib/Local Sites/client-internavigare/app/public/wp-content/plugins" &&
-ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid-pro" "/Users/habib/Local Sites/client-internavigare/app/public/wp-content/plugins"
+ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid" "/Users/habib/Local Sites/postgrid-ifffp/app/public/wp-content/plugins" &&
+ln -s "/Users/habib/Local Sites/postgrid/app/public/wp-content/plugins/the-post-grid-pro" "/Users/habib/Local Sites/postgrid-ifffp/app/public/wp-content/plugins"
 
-ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/tlp-food-menu" "/Users/habib/Local Sites/classima/app/public/wp-content/plugins"
-ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/food-menu-pro" "/Users/habib/Local Sites/classima/app/public/wp-content/plugins"
+ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/tlp-food-menu" "/Users/habib/Local Sites/kebup-foodmenu/app/public/wp-content/plugins" &&
+ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/food-menu-pro" "/Users/habib/Local Sites/kebup-foodmenu/app/public/wp-content/plugins"
 
 
-ln -s "/Users/habib/Local Sites/homlisti/app/public/wp-content/themes/homlisti" "/Users/habib/Local Sites/homlisti-old/app/public/wp-content/themes/homlisti"
+ln -s "/Users/habib/Local Sites/homlisti/app/public/wp-content/themes/homlisti" "/Users/habib/Local Sites/hom-client-test/app/public/wp-content/themes/homlisti"
 
 ln -s "/Users/habib/Local Sites/classified-listing/app/public/wp-content/plugins/rtcl-job-manager" "/Users/habib/Local Sites/test/app/public/wp-content/plugins/rtcl-job-manager"
 
@@ -16,5 +16,6 @@ ln -s "/Users/habib/Local Sites/classified-listing/app/public/wp-content/plugins
 In Windows:
 ===========
 mklink /D "C:\Documents and Settings\UserName\My Documents\My Dropbox\My Games" "C:\Documents and Settings\UserName\My Documents\My Games"
+
 
 
