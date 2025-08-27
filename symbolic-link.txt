@@ -7,6 +7,11 @@ ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/tlp-food
 ln -s "/Users/habib/Local Sites/food-menu/app/public/wp-content/plugins/food-menu-pro" "/Users/habib/Local Sites/kebup-foodmenu/app/public/wp-content/plugins"
 
 
+ln -s "/Users/habib/Local Sites/listpress/app/public/wp-content/themes/listpress" "/Users/habib/Local Sites/import-test/app/public/wp-content/themes" &&
+ln -s "/Users/habib/Local Sites/listpress/app/public/wp-content/plugins/listpress-core" "/Users/habib/Local Sites/import-test/app/public/wp-content/plugins" &&
+ln -s "/Users/habib/Local Sites/listpress/app/public/wp-content/plugins/classified-listing-toolkits" "/Users/habib/Local Sites/import-test/app/public/wp-content/plugins" 
+
+
 ln -s "/Users/habib/Local Sites/homlisti/app/public/wp-content/themes/homlisti" "/Users/habib/Local Sites/hom-client-test/app/public/wp-content/themes/homlisti"
 
 ln -s "/Users/habib/Local Sites/classified-listing/app/public/wp-content/plugins/rtcl-job-manager" "/Users/habib/Local Sites/test/app/public/wp-content/plugins/rtcl-job-manager"
@@ -19,3 +24,26 @@ mklink /D "C:\Documents and Settings\UserName\My Documents\My Dropbox\My Games" 
 
 
 
+// The below snippets preven you to delete plugin or theme from symbolic site. 
+// ---------------------------------------------------------------------------
+
+add_action( 'admin_footer', function() {
+	// Load CSS only on plugins.php and themes.php
+	$screen = get_current_screen();
+	if ( $screen && in_array($screen->id, ['plugins', 'themes'])  ) {
+		?>
+		<style>
+            tr[data-slug="classified-listing-toolkits"],
+            tr[data-slug="listpress-core"],
+            .page-title-action,
+            .delete-theme{
+	            pointer-events: none;
+	            filter: blur(3px);
+	            * {
+                    pointer-events: none;
+	            }
+            }
+		</style>
+		<?php
+	}
+});
